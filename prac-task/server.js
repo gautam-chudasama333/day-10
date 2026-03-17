@@ -7,8 +7,11 @@ const helmet = require("helmet")
 
 const app = express();
 app.use(cors());
+
+// helmet for security
 app.use(helmet());
 
+// versioned API
 app.get("/api/v1", (req, res) => {
   res.send("In api version 1");
 });
